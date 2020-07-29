@@ -59,6 +59,6 @@ The Docker workshop has three components:
 
  - [Part 5: Kubernetes Basics, and the Command Line](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/5-Kubernetes-Basics.md)
 
- - [Part 6: Pods and Services](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/6-Pods-and-Services.md)
+ - [Part 6: Deployments and Services](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/6-Deployments-and-Services.md)
 
- - [Part 7: Deployments and Labels](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/7-Deployments-and-Labels.md)
+ - [Part 7: Labels](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/7-Labels.md)

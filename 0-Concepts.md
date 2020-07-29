@@ -43,4 +43,4 @@ Don't worry about absorbing this all - we'll slowly unpack how everything wires 
 
 ### Containers and Images
 
-A Docker image is a file, composed of multiple layers, used to execute code. When this code is in execution and is able to read/write is when we consider it a **container**. In short, an **image** is an inert **container**, and a **container** is an image that is running.
+**In a nutshell:** A Docker image is a file, composed of multiple layers, used to execute code. When this code is in execution and is able to read/write is when we consider it a **container**. In short, an **image** is an inert **container**, and a **container** is an image that is running.

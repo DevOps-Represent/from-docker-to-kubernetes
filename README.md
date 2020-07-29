@@ -24,17 +24,18 @@ docker login
 
 #### The Easy Way (Using Labs)
 
-If you don't want to install Kubernetes components, you can use the online instances at: [Play With Kubernetes.](https://labs.play-with-k8s.com/)
+If you don't want to install Kubernetes components, you can use the online instances at [Play With Kubernetes.](https://labs.play-with-k8s.com/)
 
 Instructions are [in this link](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/Setup-with-Labs.md). Keep in mind that you won't be able to use your browser to see what you've deployed!
 
 
 #### The Not-so-easy Way (Using Minikube)
 
-If you want to install a single-node Kubernetes cluster on your machine to play with, you can install with [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/).
+If you want to install a single-node Kubernetes cluster on your machine to play with, you can install with [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/). With this way, you'll be able to see your deployments with your browser. 
 
-Instructions are [in this link](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/Setup-with-Minikube.md). With this way, you'll be able to see your deployments with your browser. 
+[If you are using a Windows computer, use the instructions here.](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/Setup-with-Minikube-Windows.md)
 
+[Otherwise, if you are using a Mac, use the instructions here.](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/Setup-with-Minikube-Mac.md)
 
 ## The Workshop
 

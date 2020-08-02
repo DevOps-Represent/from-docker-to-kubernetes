@@ -43,4 +43,4 @@ To check if everything's running fine, run the following on **Terminal 1**:
 kubectl get nodes
 ```
 
-This should show a list of both *master* and *worker* nodes showing as *Ready*.
+This should show a list of both *master* and *worker* nodes showing as *Ready*. Aaaand you're done! All commands from here on need to be executed from **Terminal 1**.

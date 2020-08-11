@@ -20,14 +20,14 @@ Deploying things using Kubernetes basically means that you're giving Kubernetes 
 
 In the above example, the *primary* unit contains multiple services.
 
- - The *API server* is the interface for internal and external services. When we execute `kubectl` commands, this is what we're talking to.
- - The API server talks to the *Controller Manager* makes sure that what we *ask Kubernetes to deploy is there*. It makes sure that we have the right number of resources (pods, services, endpoints).
- - The API server also talks to a *Scheduler* - which selects where our containers run. It makes sure that the nodes that pods go to aren't overloaded!
+ - The **API server** is the interface for internal and external services. When we execute `kubectl` commands, this is what we're talking to.
+ - The API server talks to the **Controller** which makes sure that what we *ask Kubernetes to deploy is there*. It makes sure that we have the right number of resources (pods, services, endpoints).
+ - The API server also talks to a **Scheduler** - which selects where our containers run. It makes sure that the nodes that pods go to aren't overloaded!
 
 We also have the replica, which is where our containers - effectively, *pods* go to.
 
- - The replicas run *kubelets* - which start and stop containers as directed by the control plane.
- - The replicas also run a *kube-proxy* - which directs traffic to our pods.
+ - The replicas run **kubelets** - which start and stop containers as directed by the control plane.
+ - The replicas also run a **kube-proxy** - which directs traffic to our pods.
 
 ![Kubes](/images/6-replica-proxy.png)
 

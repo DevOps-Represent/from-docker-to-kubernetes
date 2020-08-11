@@ -18,11 +18,17 @@ Over time, we started using [Hypervisors](https://en.wikipedia.org/wiki/Hypervis
 
 You would install the Hypervisor, and then "*fake*" hardware that you can install an operating system in.
 
+[Fake?]
+
 During the last couple of years, people have started using Docker. Compared to Virtual Machines, it all stacks up like this:
 
 ![Containerization](/images/2-containers.png)
 
 The operating system ( or to be more correct, the [kernel](https://en.wikipedia.org/wiki/Kernel_(operating_system)) ) began to be reused, and all you had to do was pack up *just what you need* - the libraries, or anything "uncommon" that doesn't exist in the kernel by default.
+
+[reusing the operatinng system?]
+
+[Kernel?]
 
 Dockerizing applications gave us a couple of things:
 

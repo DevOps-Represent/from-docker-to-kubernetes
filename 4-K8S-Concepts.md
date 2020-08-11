@@ -16,7 +16,7 @@ Deploying things using Kubernetes basically means that you're giving Kubernetes 
 
 *Kubernetes* is an open-source orchestration system for automating container deployment, scaling, and management. At its heart, it uses a *primary/replica architecture* - where the *primary* is the main controlling unit of the cluster, and the *replicas* are the units where the containers are deployed.
 
-![Kubes](/images/5-primary-replica.png)
+![Kubes](/images/5-primary-kubelet.png)
 
 In the above example, the *primary* unit contains multiple services.
 
@@ -28,6 +28,9 @@ We also have the replica, which is where our containers - effectively, *pods* go
 
  - The replicas run *kubelets* - which start and stop containers as directed by the control plane.
  - The replicas also run a *kube-proxy* - which directs traffic to our pods.
+
+![Kubes](/images/6-replica-proxy.png)
+
 
 ...but what is a pod?
 

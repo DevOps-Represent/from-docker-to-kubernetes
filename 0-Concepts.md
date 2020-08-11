@@ -1,8 +1,14 @@
 ## Basic Concepts
 
-Docker is in use now by a lot of companies when deploying applications to the cloud. However, to explain why Docker is important, we may need to go back a couple of years to revisit how we used to deploy applications.
+### A brief history of releasing internet software
 
-In the past, we used to deploy applications against operating systems installed on hardware that we bought. Much like how you'd install software on your Windows operating system, which is installed on your laptop.
+In the past, we used to install applications on operating systems installed on hardware that we bought. Much like how you'd install software on your Windows operating system, which is installed on your laptop.
+
+#### Virtual Machines
+
+[explanation of Virtual Machines and why you'd prefer them (cattle vs pets stuff)]
+
+#### Hypervisors
 
 Over time, we started having [Hypervisors](https://en.wikipedia.org/wiki/Hypervisor) - software that would allow you to emulate hardware, and install *another* operating system on top of it. Conceptually, it all stacks up like this:
 
@@ -23,6 +29,15 @@ Dockerizing applications gave us a couple of things:
  - **Isolation**. With everything that you need encapsulated inside the image/container, this means that you no longer have to worry about dependencies being missing on your destination host.
 
 ![Concerns](/images/3-concerns.png)
+
+### What is a Hypervisor?
+
+### What is Docker?
+
+[explanation of docker]
+
+Docker is in use now by a lot of companies when deploying applications to the cloud. However, to explain why Docker is important, we may need to go back a couple of years to revisit how we used to deploy applications.
+
 
 ### Docker basics
 

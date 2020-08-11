@@ -29,4 +29,14 @@ We also have the replica, which is where our containers - effectively, *pods* go
  - The replicas run *kubelets* - which start and stop containers as directed by the control plane.
  - The replicas also run a *kube-proxy* - which directs traffic to our pods.
 
-But what is a pod?
+...but what is a pod?
+
+### On Pods
+
+And here comes the most difficult part of our workshop: defining pods.
+
+Pods can be a single container, or a group of containers that are deployed on a host. Within a pod, all containers can talk to each other directly.
+
+However, other pods cannot talk to the containers in another pod directly. If say, a container (*Container A*) which is in Pod A wants to talk to *Container B* in Pod B directly, it cannot do so - *Container A* can only talk to *Container B* if *Container B* is exposed by *Pod B*.
+
+In general use however, companies generally like to use *one container per pod*. So we're going to use the terms *Pod* and *Container* interchangeably.

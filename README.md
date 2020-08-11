@@ -22,6 +22,12 @@ docker login
 
 ## Prerequisites (Kubernetes)
 
+#### The Really Easy Way (Using Google Kubernetes Engine)
+
+We can run the workshop with GKE (Google Kubernetes Engine), as part of Google Cloud. Google Cloud is one of the big three platform providers (along with AWS and Azure) that server a lot of the industry - and signup is simple. It's also *free*, as long as we clean up later.
+
+Instructions are [in this link](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/Setup-with-Google-Cloud.md). This is the best way to go!
+
 #### The Easy Way (Using Labs)
 
 If you don't want to install Kubernetes components, you can use the online instances at [Play With Kubernetes.](https://labs.play-with-k8s.com/)

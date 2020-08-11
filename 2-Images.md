@@ -131,4 +131,4 @@ Then open up your browser, and access the same page - e.g., `http://localhost:32
 
 #### Exercise
 
-Why not try adding CSS to the index.html page?
+Why not try adding CSS to the index.html page? Maybe you can even make a pull request!

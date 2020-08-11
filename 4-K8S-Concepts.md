@@ -42,7 +42,7 @@ And here comes the most difficult part of our workshop: defining pods.
 
 ![Kubes](/images/7-pods.png)
 
-However, other pods cannot talk to the containers in another pod directly. If say, a container (*Container A*) which is in Pod A wants to talk to *Container B* in Pod B directly, it cannot do so - *Container A* can only talk to *Container B* if *Container B* is exposed by *Pod B*.
+However, other pods cannot talk to the containers in another pod directly. If say, a container (*Container A.1*) which is in Pod A wants to talk to *Container B.1* in Pod B directly, it cannot do so - *Container A.1* can only talk to *Container B.1* if *Container B.1* is exposed by *Pod B*.
 
 ![Kubes](/images/8-pod-networking.png)
 

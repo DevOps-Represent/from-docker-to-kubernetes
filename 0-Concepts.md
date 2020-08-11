@@ -10,7 +10,7 @@ In the past, we used to install applications on operating systems installed on h
 
 #### Hypervisors
 
-Over time, we started having [Hypervisors](https://en.wikipedia.org/wiki/Hypervisor) - software that would allow you to emulate hardware, and install *another* operating system on top of it. Conceptually, it all stacks up like this:
+Over time, we started using [Hypervisors](https://en.wikipedia.org/wiki/Hypervisor) to manage those virtual machines - software that would allow you to emulate hardware, and install *another* operating system on top of it. Conceptually, it all stacks up like this:
 
 ![Virtualization](/images/1-vms.png)
 
@@ -30,7 +30,6 @@ Dockerizing applications gave us a couple of things:
 
 ![Concerns](/images/3-concerns.png)
 
-### What is a Hypervisor?
 
 ### What is Docker?
 

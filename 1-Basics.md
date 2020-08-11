@@ -133,6 +133,6 @@ exit
 ```
 
 
-#### Exercise
+#### Exercise!
 
 Now, what you're going to find is that there are lots of Docker containers out in the wild. Now that you know how to pull down and run images, I've got a challenge for you: why not see if you can find and run the `wordpress` image from https://hub.docker.com/_/wordpress ?

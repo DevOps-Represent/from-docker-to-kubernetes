@@ -8,11 +8,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: "devopsgirls"
+      app: "devopsgirls-2"
   template:
     metadata:
       labels:
-        app: "devopsgirls"
+        app: "devopsgirls-2"
     spec:
       containers:
         - image: "nginx:alpine"

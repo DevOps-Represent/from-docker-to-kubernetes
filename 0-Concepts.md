@@ -14,6 +14,8 @@ Over time, we started using [Hypervisors](https://en.wikipedia.org/wiki/Hypervis
 
 ![Virtualization](/images/1-vms.png)
 
+[Explanationn of Guest OS, Libraries and 'Apps']
+
 You would install the Hypervisor, and then "*fake*" hardware that you can install an operating system in.
 
 During the last couple of years, people have started using Docker. Compared to Virtual Machines, it all stacks up like this:

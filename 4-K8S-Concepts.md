@@ -32,14 +32,19 @@ We also have the replica, which is where our containers - effectively, *pods* go
 ![Kubes](/images/6-replica-proxy.png)
 
 
-...but what is a pod?
+*...but what is a pod?*
 
 ### On Pods
 
 And here comes the most difficult part of our workshop: defining pods.
 
-Pods can be a single container, or a group of containers that are deployed on a host. Within a pod, all containers can talk to each other directly.
+**Pods** can be a single container, or a group of containers that are deployed on a host. Within a pod, all containers can talk to each other directly.
+
+![Kubes](/images/7-pods.png)
 
 However, other pods cannot talk to the containers in another pod directly. If say, a container (*Container A*) which is in Pod A wants to talk to *Container B* in Pod B directly, it cannot do so - *Container A* can only talk to *Container B* if *Container B* is exposed by *Pod B*.
+
+![Kubes](/images/8-pod-networking.png)
+
 
 In general use however, companies generally like to use *one container per pod*. So we're going to use the terms *Pod* and *Container* interchangeably.

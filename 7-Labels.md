@@ -4,6 +4,8 @@ So, deployments allow us to dynamically create pods according to our desired sta
 
 **Labels** and **Selectors** allow us to associate services based on key-value pairs. **Labels** are key/value pairs that are attached to objects (like pods), and let us specify attributes to objects. **Selectors** allow us to specify criteria on what objects are associated with based on those criteria. 
 
+![Kubes](/images/13-labels.png)
+
 It's okay, we're going to break those down.
 
 ### Why labels?
@@ -42,7 +44,11 @@ kubectl get pods
 
 ### Selectors
 
-We can use **Selectors** as a means of *selecting* which objects to apply our changes to. If we inspect the file in `kube/service.yaml`, we're going to see the following selector:
+We can use **Selectors** as a means of *selecting* which objects to apply our changes to. 
+
+![Kubes](/images/13-selectors.png)
+
+If we inspect the file in `kube/service.yaml`, we're going to see the following selector:
 
 ```
   selector:

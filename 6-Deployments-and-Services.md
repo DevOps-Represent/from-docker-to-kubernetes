@@ -4,6 +4,8 @@ So the pod is up, now how do we access it?
 
 In Kubernetes, there is an object type called a `service` which functions as a load balancer. What this means is that if someone needs to talk to or access a `Pod`, then they need to go through the `Service`.
 
+### Services
+
 We can create a service for your pod with the following command:
 
 ```
@@ -66,11 +68,66 @@ kubectl delete pod devopsgirls-pod
 
 Now, try accessing the service again using the instructions above. Spoiler: it's not gonna work! Just as we need high availability for the applications we put out on the web, we need to make sure that our pods are highly available. So here come **deployments**.
 
-Creating a deployment
+**Deployments** are a set of declarative updates for Pods. What this means in a nutshell, is that with **Deployments**, you can *declare* your desired number and state for a group of pods. For reference, we can take a look at the contents of [this file](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/kubes/deployment.yaml):
 
-Listing the deployment
+```
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "devopsgirls"
+  template:
+    metadata:
+      labels:
+        app: "devopsgirls"
+    spec:
+      containers:
+        - image: "nginx:alpine"
+          name: nginx
+          ports:
+            - containerPort: 80
+```
 
-Listing the pods "inside" a deployment
+What the above YAML block says is that we want 2 pods (`replicas: 2`) running with the same pod declaration that we used earlier ( `image: "nginx:alpine"`, `ports:`, etc). To apply the file, we simply run the same `apply` command we used before:
 
-Removing a pod inside a deployment
+```
+kubectl apply -f kube/deployment.yaml
+```
 
+We can then inspect our deployement with the same `get` command we used before:
+
+```
+kubectl get deployments
+```
+
+Now, we can also see the pods we made! What do you see when you run the following command?
+
+```
+kubectl get pods
+```
+
+This should show us something similar to the following:
+
+```
+(devops-girls)$ kubectl get pods
+NAME                                     READY   STATUS    RESTARTS   AGE
+devopsgirls-deployment-d44844c8f-29tsn   1/1     Running   0          12s
+devopsgirls-deployment-d44844c8f-qhqms   1/1     Running   0          12s
+```
+
+Now, watch what happens when we remove one of the pods! We can remove one of the pods in the deployment by running the same `delete` command we had earlier - but replacing the `pod name` for one of the pods above:
+
+```
+kubectl delete pod devopsgirls-deployment-d44844c8f-qhqms
+```
+
+Now, what do you see when you list the pods afterwards with a `kubectl get pods`? You should see the pods being created again, as follows:
+
+```
+(devops-girls)$ kubectl get pods
+NAME                                     READY   STATUS              RESTARTS   AGE
+devopsgirls-deployment-d44844c8f-29tsn   1/1     Running             0          2m11s
+devopsgirls-deployment-d44844c8f-qnglw   0/1     ContainerCreating   0          6s
+```
+
+Neat, huh?

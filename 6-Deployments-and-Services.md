@@ -4,6 +4,8 @@ So the pod is up, now how do we access it?
 
 In Kubernetes, there is an object type called a `service` which functions as a load balancer. What this means is that if someone needs to talk to or access a `Pod`, then they need to go through the `Service`.
 
+![Kubes](/images/12-services.png)
+
 ### Services
 
 We can create a service for your pod with the following command:
@@ -60,7 +62,12 @@ kubectl delete pod devopsgirls-pod
 
 Now, try accessing the service again using the instructions above. Spoiler: it's not gonna work! Just as we need high availability for the applications we put out on the web, we need to make sure that our pods are highly available. So here come **deployments**.
 
-**Deployments** are a set of declarative updates for Pods. What this means in a nutshell, is that with **Deployments**, you can *declare* your desired number and state for a group of pods. For reference, we can take a look at the contents of [this file](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/kubes/deployment.yaml):
+**Deployments** are a set of declarative updates for Pods. What this means in a nutshell, is that with **Deployments**, you can *declare* your desired number and state for a group of pods. 
+
+![Kubes](/images/12-deployments.png)
+
+
+For reference, we can take a look at the contents of [this file](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/kubes/deployment.yaml):
 
 ```
 spec:

@@ -23,24 +23,16 @@ Which should give you an output that's similar to below:
 ```
 $ kubectl get service
 NAME                    TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
-devopsgirls-service     ClusterIP   10.105.91.242    <none>        8000/TCP   5s
+devopsgirls-service     ClusterIP   10.105.91.242    X.X.X.X        8000/TCP   5s
 ```
 
-We can now access the services of your pod!
-
- - If you're running this workshop using `minikube`, then use the following command to see the URL you can use in your browser to access it:
+We can now access the services of your pod! Simply use your browser to access the `EXTERNAL-IP` as reported above (this may take time, so if it doesn't work, wait a bit and run `kubectl get service again`). Use the following URL, for example:
 
 ```
-minikube service --url devopsgirls-service
-```
- 
- - If you're running this workshop using *Play-with-k8s*, simply run the following command on Terminal 1:
-
-```
-curl <cluster IP>
+http://EXTERNAL-IP/
 ```
 
-Now, to remove the service, we simply delete the `service` object just as we do any other object in Kubernetes:
+You should see the Nginx greeting page! Now, to remove the service, we simply delete the `service` object just as we do any other object in Kubernetes:
 
 ```
 kubectl delete service devopsgirls-service

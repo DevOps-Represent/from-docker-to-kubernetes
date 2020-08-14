@@ -75,4 +75,73 @@ NAME                    TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AG
 devopsgirls-service     ClusterIP   10.105.91.242    X.X.X.X        8000/TCP   5s
 ```
 
-Now...what happens if we remove one of the pods that the service is connected to?
+Now...what happens if we remove one of the pods that the service is connected to? What we're going to find is that the service stays up - because *now* our infrastructure is highly available, as there are multiple pods running at the same time.
+
+
+### Putting everything together
+
+Now, remember the Docker image we published earlier? Well, we can now deploy it. The only thing we need to do is to change the `image` on our container spec to the repository where our image lives. This section, specifically:
+
+```
+    spec:
+      containers:
+        - image: "nginx:alpine"
+```
+
+We also don't have to have the components (deployments, services) in different files. We can use one file! So, if we open up the file in `kube/combined.yaml` with our Google Console editor, we can have something that looks like this:
+
+```
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "devopsgirls-deployment"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "devopsgirls"
+  template:
+    metadata:
+      labels:
+        app: "devopsgirls"
+    spec:
+      containers:
+        - image: "mydockerusername/devopsgirls:latest"
+          name: nginx
+          ports:
+            - containerPort: 80
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "devopsgirls-service"
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: "devopsgirls"
+```
+
+Where `mydockerusername/devopsgirls:latest` is our Docker username, the repository, and the tag that we used. We can now deploy it using the same `apply` command we've been using:
+
+```
+kubectl apply -f kubes/combined.yaml
+```
+
+We can try to find the `EXTERNAL IP` of our new service with the following command:
+
+```
+kubectl get service
+```
+
+And finally, we can use our browser to see our deployed work!
+
+```
+http://<EXTERNAL-IP>
+```
+
+And hopefully, this shows our Docker image, running on Kubernetes, accessible on the web. Congratulations!

@@ -61,10 +61,10 @@ The Docker workshop has three components:
 
 #### Kubernetes
 
- - [Part 4: Kubernetes Concepts.](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/4-K8S-Concepts.md)
+ - [Part 4: Kubernetes Concepts.](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/4-K8S-Concepts.md) In this part, we'll review what Kubernetes is and why companies use it.
 
- - [Part 5: Kubernetes Basics, and the Command Line](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/5-Kubernetes-Basics.md)
+ - [Part 5: Kubernetes Basics, and the Command Line.](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/5-Kubernetes-Basics.md) In this part, we'll go through the Kubernetes command line, and make our way into creating our first objects.
 
- - [Part 6: Deployments and Services](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/6-Deployments-and-Services.md)
+ - [Part 6: Deployments and Services.](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/6-Deployments-and-Services.md) In this section, we'll go through how to make our pods available to the world, and how we can update them at scale.
 
- - [Part 7: Labels](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/7-Labels.md)
+ - [Part 7: Labels](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/7-Labels.md). In this section, we stitch everything together.

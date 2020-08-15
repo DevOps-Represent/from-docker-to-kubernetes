@@ -25,7 +25,7 @@ Once this finishes, click on the Google Console button on the top-right of the p
 On the console, let's set our region. For this workshop, we'll be using `australia-southeast1`:
 
 ```
-gcloud config set compute/zone australia-southeastl-a
+gcloud config set compute/zone australia-southeast1-a
 ```
 
 After this, all we need to do is create a cluster. Type in the following command to create a single-node cluster called `devops-girls` (Feel free to use any cluster name!):

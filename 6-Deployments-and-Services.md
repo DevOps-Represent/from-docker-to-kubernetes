@@ -31,7 +31,7 @@ devopsgirls-service     ClusterIP   10.105.91.242    X.X.X.X        8000/TCP   5
 We can now access the services of your pod! Simply use your browser to access the `EXTERNAL-IP` as reported above (this may take time, so if it doesn't work, wait a bit and run `kubectl get service again`). Use the following URL, for example:
 
 ```
-http://EXTERNAL-IP/
+http://EXTERNAL-IP:8000/
 ```
 
 You should see the Nginx greeting page! Now, to remove the service, we simply delete the `service` object just as we do any other object in Kubernetes:

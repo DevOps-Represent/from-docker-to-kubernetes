@@ -1,6 +1,11 @@
 # Setting up with Labs
 
-To setup with the Play with Kubernetes environment, simply login [to the Labs website with your Github or Dockerhub credentials](http://labs.play-with-k8s.com/). Once logged in, we'll need to go through a couple of steps:
+To setup with the Play with Kubernetes environment, simply login [to the Labs website with your Github or Dockerhub credentials](http://labs.play-with-k8s.com/).
+
+*NOTE: This option comes with a little bit of risk as it can sometimes not work and your virtual environment lasts 4 hours before being destroyed* ☠️
+
+
+Once logged in, we'll need to go through a couple of steps:
 
 ### Create two instances
 

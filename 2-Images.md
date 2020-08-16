@@ -4,7 +4,7 @@ As neat as it is to quickly run preexisting images, we probably want to explore 
 
 A `Dockerfile` is the traditional naming of a file which contains instructions on how to build an image.
 
-![Dockerfile](/images/8-docker-build.png)
+![Dockerfile](images/8-docker-build.png)
 
 #### Docker Images
 
@@ -132,3 +132,7 @@ Then open up your browser, and access the same page - e.g., `http://localhost:32
 #### Exercise
 
 Why not try adding CSS to the index.html page? Maybe you can even make a pull request!
+
+UP NEXT...
+
+[Docker Tags and Push](3-Tags-and-Push.md)

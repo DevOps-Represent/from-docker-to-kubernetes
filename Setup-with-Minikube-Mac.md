@@ -46,3 +46,5 @@ kubectl cluster-info
 
 Huzzah! You're ready!
 
+![minikube Magic](images/14-minikube-magic.png)
+

@@ -25,6 +25,8 @@ docker pull busybox
 
 This will pull the `busybox` image from the default Docker registry: https://hub.docker.com/explore/. You can also try pulling other images from the registry if you want!
 
+[What is busybox?](https://hub.docker.com/_/busybox)
+
 Now that you have the `busybox` image, you can try running it:
 
 ```
@@ -136,3 +138,7 @@ exit
 #### Exercise!
 
 Now, what you're going to find is that there are lots of Docker containers out in the wild. Now that you know how to pull down and run images, I've got a challenge for you: why not see if you can find and run the `wordpress` image from https://hub.docker.com/_/wordpress ?
+
+UP NEXT...
+
+[Docker Images](2-Images.md)

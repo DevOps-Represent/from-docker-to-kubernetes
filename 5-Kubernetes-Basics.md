@@ -125,3 +125,6 @@ Now, what do we see when we execute the following command?
 kubectl get pods devopsgirls-pod -o yaml
 ```
 
+UP NEXT...
+
+[Deployments and Services](6-Deployments-and-Services.md)

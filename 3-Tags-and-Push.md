@@ -95,3 +95,6 @@ docker pull banana-smith/my-first-repo
 
 Now that you know how to login and push images, try creating a ***Public*** repository and pushing an image to it. Ask the person next to you to pull the image down and run it.
 
+UP NEXT...
+
+[Kubernetes Concepts](4-K8S-Concepts.md)

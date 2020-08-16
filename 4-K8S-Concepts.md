@@ -48,3 +48,7 @@ However, other pods cannot talk to the containers in another pod directly. If sa
 
 
 In general use however, companies generally like to use *one container per pod*. So we're going to use the terms *Pod* and *Container* interchangeably.
+
+UP NEXT...
+
+[Kubernetes Basics](5-Kubernetes-Basics.md)

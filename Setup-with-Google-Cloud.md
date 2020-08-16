@@ -67,19 +67,29 @@ You'll see the following:
 
 Like the previous steps, this may take some time - so maybe make another cup of tea. ☕️
 
-You'll see the Google Cloud console doing a couple of things (which we'll talk about shortly). Once it finishes, the only command left to run is to get the credentials to the cluster:
+You'll see the Google Cloud console doing a couple of things (which we'll talk about shortly). 
+
+When it finishes, you'll see this:
+
+![Cluster created](images/11-cluster-created.png)
+
+
+
+Once it finishes, the only command left to run is to get the credentials to the cluster:
 
 ```
 gcloud container clusters get-credentials devops-girls
 ```
 
-Where `devops-girls` is what you called your cluster. And now you're done!
+Where `devops-girls` is what you called your cluster. And now you're done and you should see lines like this in your console!
+
+![Credentials](images/11-final-output.png)
 
 
 <details><summary>Troubleshooting</summary><p>
 
 
-If you get the following error:
+If you get the following error when creating your cluster:
 
 `ERROR: (gcloud.container.clusters.create) ResponseError: code=500, message=Internal error encountered.`
 

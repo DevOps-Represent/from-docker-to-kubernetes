@@ -4,7 +4,7 @@
 
 A hypervisor allows you to create and run virtual machines. [VirtualBox](https://www.virtualbox.org/wiki/Downloads) will be the hypervisor we'll be using for this exercise, so make sure you download and install the packages for your operating system:
 
-* [If you are using a Mac machine, use this link](https://download.virtualbox.org/virtualbox/6.0.14/VirtualBox-6.0.14-133895-OSX.dmg)
+💻 [If you are using a Mac machine, use this link to download/install the lastest version of Virtual Box for Mac](https://download.virtualbox.org/virtualbox/6.0.14/VirtualBox-6.0.14-133895-OSX.dmg)
 
 ### Installing minikube
 

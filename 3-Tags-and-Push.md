@@ -2,7 +2,7 @@
 
 Images are good and fine, but eventually you'll need a way to share them with people or systems so that they can be executed or deployed. Docker uses mechanisms like `docker tag` and `docker push` to make this happen.
 
-![Push-tag](/images/10-push-tag.png)
+![Push-tag](images/10-push-tag.png)
 
 #### The basics of tags
 
@@ -57,11 +57,11 @@ Now your image has three tags. Note that you can use tags as a way of referencin
 
 Docker repositories allow you to share your images with the community. To get started, we'll create a repository by [going to Docker Hub](https://hub.docker.com/) and selecting **Create A Repository**:
 
-![Create-Repo](/images/6-create-repo.png)
+![Create-Repo](images/6-create-repo.png)
 
 Name it however you want. In the below example, we're calling it `/my-first-repo`:
 
-![Private Repo](/images/7-create-repo.png)
+![Private Repo](images/7-create-repo.png)
 
 We're setting it to **Private**.
 

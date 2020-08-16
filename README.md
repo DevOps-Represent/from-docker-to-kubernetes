@@ -46,6 +46,7 @@ Use this option if you're more familiar with with the commandline. Keep in mind 
 
 After you've setup an environment with Docker and Kubernetes, you're going to need some files from this repository for parts of this workshop.
 
+You'll need to ![Create a Personal Access Token and use that token on the command line](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
 
 ## The Workshop
 

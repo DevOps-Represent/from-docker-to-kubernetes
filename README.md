@@ -37,8 +37,6 @@ Instructions are [in this link](https://github.com/DevOps-Girls/from-docker-to-k
 
 #### The Not-so-easy Way (Using Minikube)
 
-*This option is suitable for people who are comfortable with tools like Virtualbox, VMWare, and other tools for virtualization.*
-
 If you want to install a single-node Kubernetes cluster on your machine to play with, you can install with [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/). With this way, you'll be able to see your deployments with your browser. 
 
 [If you are using a Windows computer, use the instructions here.](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/Setup-with-Minikube-Windows.md)

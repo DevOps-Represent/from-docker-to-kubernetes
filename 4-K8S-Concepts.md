@@ -8,7 +8,17 @@ So we just covered how Dockerizing applications gave us a couple of things:
 
 ![Concerns](images/3-concerns.png)
 
-Now, the mechanism by which things are packaged isn't the same as the mechanism by which they're deployed. If a Docker provides you with a way to make self-enclosed images, Kubernetes provides you with a way to make them available to the world.
+### Pods
+
+And here comes the most difficult part of our workshop: *defining pods.*
+
+**Pods** can be a single container, or a group of containers that are deployed on a host. Within a pod, all containers can talk to each other directly.
+
+![Kubes](images/7-pods.png)
+
+### Kubernetes
+
+Now, the mechanism by which things are packaged isn't the same as the mechanism by which they're deployed. If a Docker container provides you with a way to make self-enclosed images, Kubernetes provides you with a way to make them available to the world.
 
 Deploying things using Kubernetes basically means that you're giving Kubernetes instructions on where to get your app, and how you'll get it online. Kubernetes handles the rest.
 
@@ -31,21 +41,16 @@ We also have the replica, which is where our containers - effectively, *pods* go
 
 ![Kubes](images/6-replica-proxy.png)
 
+### Kubernetes and Networking
+Now that we've covered some more basics, let's scratch the surface of Kubernetes and networking using pods as an example.
 
-*...but what is a pod?*
+We previously explained *"Within a pod, all containers can talk to each other directly".* 
 
-### On Pods
+**Let's look at a slightly more complex scenario:**
 
-And here comes the most difficult part of our workshop: defining pods.
+Pods cannot talk to the containers in another pod directly. If say, a container (*Container A.1*) which is in Pod A wants to talk to *Container B.1* in Pod B directly, it cannot do so - *Container A.1* can only talk to *Container B.1* if *Container B.1* is exposed by *Pod B*.
 
-**Pods** can be a single container, or a group of containers that are deployed on a host. Within a pod, all containers can talk to each other directly.
-
-![Kubes](/images/7-pods.png)
-
-However, other pods cannot talk to the containers in another pod directly. If say, a container (*Container A.1*) which is in Pod A wants to talk to *Container B.1* in Pod B directly, it cannot do so - *Container A.1* can only talk to *Container B.1* if *Container B.1* is exposed by *Pod B*.
-
-![Kubes](/images/8-pod-networking.png)
-
+![Kubes](images/8-pod-networking.png)
 
 In general use however, companies generally like to use *one container per pod*. So we're going to use the terms *Pod* and *Container* interchangeably.
 

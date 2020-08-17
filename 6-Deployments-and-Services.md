@@ -11,7 +11,7 @@ In Kubernetes, there is an object type called a `service` which functions as a l
 We can create a service for your pod with the following command:
 
 ```
-kubectl expose pod devopsgirls-pod --port=8000 --targetport=80 --name devopsgirls-service --type LoadBalancer
+kubectl expose pod devopsgirls-pod --port=8000 --target-port=80 --name devopsgirls-service --type LoadBalancer
 ```
 
 We can check if your service exists by listing them out, the same way we list out our pods:

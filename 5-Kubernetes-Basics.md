@@ -103,7 +103,7 @@ Isn't that neat? But what it also means, is that we can change the pods that we 
 ```
 # This is an example of a pod
 ---
-apiVersion: apps/v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: "devopsgirls-pod"

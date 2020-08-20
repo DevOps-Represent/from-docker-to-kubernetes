@@ -73,6 +73,7 @@ Then open up your browser, and access the same page - e.g., `http://localhost:32
 
 ```
 docker stop banana-smith-container
+docker rm banana-smith-container
 ```
 
 #### Dockerfile instructions breakdown
@@ -132,6 +133,20 @@ Then open up your browser, and access the same page - e.g., `http://localhost:32
 #### Exercise
 
 Why not try adding CSS to the index.html page? Maybe you can even make a pull request!
+
+Once you're done, you can delete the container.
+
+Stop the container by running:
+
+```
+docker stop banana-smith-container
+```
+
+Remove the stopped container by running:
+
+```
+docker rm banana-smith-container
+```
 
 UP NEXT...
 

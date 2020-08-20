@@ -41,6 +41,13 @@ If you want to install a single-node Kubernetes cluster on your machine to play 
 
 Use this option if you're more familiar with with the command line. Keep in mind minikube is used for testing from your local machine and could be useful for your kubernetes usecase.
 
+
+## Prerequisites (Git)
+
+After you've setup an environment with Docker and Kubernetes, you're going to need some files from this repository for parts of this workshop.
+
+You'll need to ![Create a Personal Access Token and use that token on the command line](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
+
 ## The Workshop
 
 

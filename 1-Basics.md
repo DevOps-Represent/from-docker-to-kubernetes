@@ -113,6 +113,12 @@ Neat, right? Finally, stop the container by running:
 docker stop banana-smith-container
 ```
 
+Remove the stopped container by running:
+
+```
+docker rm banana-smith-container
+```
+
 
 #### Docker Run Shell Within Nginx
 

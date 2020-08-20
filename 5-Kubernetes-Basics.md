@@ -80,6 +80,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: "devopsgirls-pod"
+  labels:
+    name: "devopsgirls-pod"
 spec:
   containers:
     - image: "nginx:alpine"
@@ -107,6 +109,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: "devopsgirls-pod"
+  labels:
+    name: "devopsgirls-pod"
 spec:
   containers:
     - image: "nginx:latest"

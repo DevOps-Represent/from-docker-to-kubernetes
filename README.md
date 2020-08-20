@@ -24,7 +24,7 @@ docker login
 
 #### The Really Easy Way (Using Google Kubernetes Engine)
 
-We can run the workshop with GKE (Google Kubernetes Engine), as part of Google Cloud. Google Cloud is one of the big three platform providers (along with AWS and Azure) that server a lot of the industry - and signup is simple. It's also *free*, as long as we clean up later.
+We can run the workshop with GKE (Google Kubernetes Engine), as part of Google Cloud. Google Cloud is one of the big three platform providers (along with AWS and Azure) that serve a lot of the industry - and signup is simple. It's also *free*, as long as we clean up later.
 
 Instructions are [in this link](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/Setup-with-Google-Cloud.md). This is the best way to go!
 
@@ -39,7 +39,7 @@ If you want to install a single-node Kubernetes cluster on your machine to play 
 
 [Otherwise, if you are using a Mac, use the instructions here.](https://github.com/DevOps-Girls/from-docker-to-kubernetes/blob/master/Setup-with-Minikube-Mac.md)
 
-Use this option if you're more familiar with with the commandline. Keep in mind minikube is used for testing from your local machine and could be useful for your kubernetes usecase.
+Use this option if you're more familiar with with the command line. Keep in mind minikube is used for testing from your local machine and could be useful for your kubernetes usecase.
 
 ## The Workshop
 

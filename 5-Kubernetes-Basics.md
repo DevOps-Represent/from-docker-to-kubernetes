@@ -76,7 +76,7 @@ This will format the output as YAML - a human-readable serialization language. I
 ```
 # This is an example of a pod
 ---
-apiVersion: apps/v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: "devopsgirls-pod"

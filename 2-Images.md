@@ -69,7 +69,13 @@ To see that it's actually running, check the port by:
 docker port banana-smith-container
 ```
 
-Then open up your browser, and access the same page - e.g., `http://localhost:32768`. Once done, cleanup the running container by running:
+You should see something like 
+
+```
+80/tcp -> 0.0.0.0:32768
+```
+
+Then access the same page, e.g. open up your browser to `http://0.0.0.0:32768` or `curl http://0.0.0.0:32768`. Once done, cleanup the running container by running:
 
 ```
 docker stop banana-smith-container
@@ -127,7 +133,13 @@ Then check the port it's running under:
 docker port banana-smith-container
 ```
 
-Then open up your browser, and access the same page - e.g., `http://localhost:32768`. What you should see is your new, fresh image!
+You should see something like 
+
+```
+80/tcp -> 0.0.0.0:32769
+```
+
+Then open up your browser, and access the same page - e.g., `http://0.0.0.0:32769` or `curl http://0.0.0.0:32769`. What you should see is your new, fresh image!
 
 
 #### Exercise

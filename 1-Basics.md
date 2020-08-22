@@ -107,6 +107,11 @@ This basically means that the service is accessible from port `32768` of your ma
 http://localhost:32768
 ```
 
+Or via the command line with
+```
+curl http://localhost:32768
+```
+
 Neat, right? Finally, stop the container by running:
 
 ```

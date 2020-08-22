@@ -73,7 +73,7 @@ kubectl apply -f kubes/service.yaml
 Now, we can try exposing the service:
 
 ```
-kubectl expose pod devopsgirls-pod --port=8000 --target-port=80 --name devopsgirls-service --type LoadBalancer
+kubectl apply -f kubes/service-exposed.yaml
 ```
 
 Running `kubectl get service` should show us the external IP we can use to see our deployments with our **browser**:

@@ -90,7 +90,7 @@ spec:
 What the above YAML block says is that we want 2 pods (`replicas: 2`) running with the same pod declaration that we used earlier ( `image: "nginx:alpine"`, `ports:`, etc). To apply the file, we simply run the same `apply` command we used before:
 
 ```
-kubectl apply -f kube/deployment.yaml
+kubectl apply -f kubes/deployment.yaml
 ```
 
 We can then inspect our deployement with the same `get` command we used before:

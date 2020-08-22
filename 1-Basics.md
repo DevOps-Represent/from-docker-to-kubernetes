@@ -104,12 +104,12 @@ Which will give us something like:
 This basically means that the service is accessible from port `32768` of your machine. You should be able to open up your browser and go to:
 
 ```
-http://localhost:32768
+http://0.0.0.0:32768
 ```
 
 Or via the command line with
 ```
-curl http://localhost:32768
+curl http://0.0.0.0:32768
 ```
 
 Neat, right? Finally, stop the container by running:

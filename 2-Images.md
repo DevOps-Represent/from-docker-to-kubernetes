@@ -78,7 +78,7 @@ docker rm banana-smith-container
 
 #### Dockerfile instructions breakdown
 
-Now, in the `docker-101` directory, you'll find a file called `index.html`. Unfortunately, I have no eye for design - so feel free to modify the page to make it look as good as possible.
+Now, in the `from-docker-to-kubernetes` directory, you'll find a file called `index.html`. Unfortunately, I have no eye for design - so feel free to modify the page to make it look as good as possible.
 
 For the next section, we're going to be modifying our Dockerfile so that 1.) We replace the configuration, and 2.) We insert our `index.html` file. We'll do this by changing the `Dockerfile` so it looks like this:
 

@@ -21,7 +21,7 @@ If we inspect the YAML file for the deployment we had earlier, we're going to se
 
 The above `labels` declaration basically means that every single `pod` that is created will have the key/value pair of `app: "devopsgirls"` associated with it. We can create a new set of pods by changing the `labels:` declaration.
 
-Open up with the Google Console editor by clicking on **Open Editor**, and select the file in `kube/deployment.yaml`. Change the file so it looks like this:
+Open up with the Google Console editor by clicking on **Open Editor**, and select the file in `kubes/deployment.yaml`. Change the file so it looks like this:
 
 ```
   template:
@@ -33,7 +33,7 @@ Open up with the Google Console editor by clicking on **Open Editor**, and selec
 Save your changes. Now, we can apply the labels by using the same `apply` command we were using before:
 
 ```
-kubectl apply -f kube/deployment.yaml
+kubectl apply -f kubes/deployment.yaml
 ```
 
 We can see how it affects our pods by running the following command:
@@ -48,7 +48,7 @@ We can use **Selectors** as a means of *selecting* which objects to apply our ch
 
 ![Kubes](/images/13-selectors.png)
 
-If we inspect the file in `kube/service.yaml`, we're going to see the following selector:
+If we inspect the file in `kubes/service.yaml`, we're going to see the following selector:
 
 ```
   selector:
@@ -88,7 +88,7 @@ Now, remember the Docker image we published earlier? Well, we can now deploy it.
         - image: "nginx:alpine"
 ```
 
-We also don't have to have the components (deployments, services) in different files. We can use one file! So, if we open up the file in `kube/combined.yaml` with our Google Console editor, we can have something that looks like this:
+We also don't have to have the components (deployments, services) in different files. We can use one file! So, if we open up the file in `kubes/combined.yaml` with our Google Console editor, we can have something that looks like this:
 
 ```
 ---

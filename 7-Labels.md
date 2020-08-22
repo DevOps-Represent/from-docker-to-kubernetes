@@ -19,7 +19,9 @@ If we inspect the YAML file for the deployment we had earlier, we're going to se
         app: "devopsgirls"
 ```
 
-The above `labels` declaration basically means that every single `pod` that is created will have the key/value pair of `app: "devopsgirls"` associated with it. We can create a new set of pods by changing the `labels:` declaration.
+The above `labels` declaration basically means that every single `pod` that is created will have the key/value pair of `app: "devopsgirls"` associated with it. 
+
+We can create a new set of pods by changing the `labels:` declaration.
 
 Open up with the Google Console editor by clicking on **Open Editor**, and select the file in `kubes/deployment.yaml`. Change the file so it looks like this:
 
@@ -27,7 +29,8 @@ Open up with the Google Console editor by clicking on **Open Editor**, and selec
   template:
     metadata:
       labels:
-        app: "devopsgirls-2"
+        app: "devopsgirls"
+        dark: "true"
 ```
 
 Save your changes. Now, we can apply the labels by using the same `apply` command we were using before:
@@ -40,6 +43,12 @@ We can see how it affects our pods by running the following command:
 
 ```
 kubectl get pods
+```
+
+or with more detail with:
+
+```
+kubectl describe pods
 ```
 
 ### Selectors
@@ -58,7 +67,7 @@ If we inspect the file in `kubes/service.yaml`, we're going to see the following
 This means that the `service` will only apply to the objects or pods that have the label `app: "devopsgirls"`. We can create the service with the same `apply` command that we used before:
  
 ```
-kubectl apply -f service.yaml
+kubectl apply -f kubes/service.yaml
 ```
 
 Now, we can try exposing the service:

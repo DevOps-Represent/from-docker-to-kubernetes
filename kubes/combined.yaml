@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: "devopsgirls-deployment"
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: "devopsgirls"
@@ -18,7 +18,7 @@ spec:
           name: nginx
           ports:
             - containerPort: 80
- 
+
 
 ---
 apiVersion: v1

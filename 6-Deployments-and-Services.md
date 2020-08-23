@@ -71,7 +71,7 @@ For reference, we can take a look at the contents of [this file](https://github.
 
 ```
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: "devopsgirls"
@@ -87,7 +87,7 @@ spec:
             - containerPort: 80
 ```
 
-What the above YAML block says is that we want 2 pods (`replicas: 2`) running with the same pod declaration that we used earlier ( `image: "nginx:alpine"`, `ports:`, etc). To apply the file, we simply run the same `apply` command we used before:
+What the above YAML block says is that we want 1 pod (`replicas: 1`) running with the same pod declaration that we used earlier ( `image: "nginx:alpine"`, `ports:`, etc). To apply the file, we simply run the same `apply` command we used before:
 
 ```
 kubectl apply -f kubes/deployment.yaml
@@ -97,6 +97,12 @@ We can then inspect our deployement with the same `get` command we used before:
 
 ```
 kubectl get deployments
+```
+
+We can increase this number to 2 pods (`replicas: 2`) in `deployment.yaml` to run two pods with the same pod declaration:
+
+```
+kubectl apply -f kubes/deployment.yaml
 ```
 
 Now, we can also see the pods we made! What do you see when you run the following command?
@@ -130,6 +136,14 @@ devopsgirls-deployment-d44844c8f-qnglw   0/1     ContainerCreating   0          
 ```
 
 Neat, huh?
+
+Cleaning up, if you're using Google Cloud, the default settings only allow two pods like this to run at one time.
+
+We'll be doing some cool stuff later that'll use multiple pod declarations, so we should set the number of pods back to 1 pods (`replicas: 1`) and run:
+
+```
+kubectl apply -f kubes/deployment.yaml
+```
 
 UP NEXT...
 

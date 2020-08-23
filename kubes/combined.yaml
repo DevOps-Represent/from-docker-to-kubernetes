@@ -26,6 +26,7 @@ kind: Service
 metadata:
   name: "devopsgirls-service"
 spec:
+  type: LoadBalancer
   ports:
     - port: 80
       targetPort: 80

@@ -37,7 +37,7 @@ exit
 
 #### Dockerfiles
 
-Okay! Now let's make us some images. In the `docker-101` directory, you'll find a file called `Dockerfile`. Inside this file, you'll see:
+Okay! Now let's make us some images. In the `from-docker-to-kubernetes` directory, you'll find a file called `Dockerfile`. Inside this file, you'll see:
 
 ```
 FROM nginx:mainline-alpine
@@ -45,7 +45,7 @@ FROM nginx:mainline-alpine
 
 This basically means that we're starting from the `nginx:mainline-alpine` image at the starting layer. This layer contains similar things to the `nginx` container you were running earlier.
 
-To build the image, we can then run the following from inside the `docker-101` directory:
+To build the image, we can then run the following from inside the `from-docker-to-kubernetes` directory:
 
 ```
 docker build -t banana-smith-image .

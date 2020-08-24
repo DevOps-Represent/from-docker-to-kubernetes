@@ -37,7 +37,11 @@ exit
 
 #### Dockerfiles
 
-Okay! Now let's make us some images. In the `from-docker-to-kubernetes` directory, you'll find a file called `Dockerfile`. Inside this file, you'll see:
+Okay! Now let's make us some images.
+
+You're going to need some files from this repository for this part.
+
+In the `from-docker-to-kubernetes` directory (this git repository), you'll find a file called `Dockerfile`. Inside this file, you'll see:
 
 ```
 FROM nginx:mainline-alpine
@@ -45,7 +49,7 @@ FROM nginx:mainline-alpine
 
 This basically means that we're starting from the `nginx:mainline-alpine` image at the starting layer. This layer contains similar things to the `nginx` container you were running earlier.
 
-To build the image, we can then run the following from inside the `from-docker-to-kubernetes` directory:
+To build the image, we can then run the following from inside the `from-docker-to-kubernetes` directory (this git repository):
 
 ```
 docker build -t banana-smith-image .
@@ -84,7 +88,7 @@ docker rm banana-smith-container
 
 #### Dockerfile instructions breakdown
 
-Now, in the `from-docker-to-kubernetes` directory, you'll find a file called `index.html`. Unfortunately, I have no eye for design - so feel free to modify the page to make it look as good as possible.
+Now, in the `from-docker-to-kubernetes` directory (this git repository), you'll find a file called `index.html`. Unfortunately, I have no eye for design - so feel free to modify the page to make it look as good as possible.
 
 For the next section, we're going to be modifying our Dockerfile so that 1.) We replace the configuration, and 2.) We insert our `index.html` file. We'll do this by changing the `Dockerfile` so it looks like this:
 

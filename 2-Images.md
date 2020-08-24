@@ -79,7 +79,21 @@ You should see something like
 80/tcp -> 0.0.0.0:32768
 ```
 
-Then access the same page, e.g. open up your browser to `http://0.0.0.0:32768` or `curl http://0.0.0.0:32768`. Once done, cleanup the running container by running:
+or
+
+```
+80/tcp -> localhost:32769
+```
+
+Then open up your browser, and access the same page,
+
+e.g., (`http://0.0.0.0:32769` or `http://localhost:32769`)
+
+or
+
+(`curl http://0.0.0.0:32769` or `curl http://localhost:32769`).
+
+Once done, cleanup the running container by running:
 
 ```
 docker stop banana-smith-container

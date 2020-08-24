@@ -143,7 +143,19 @@ You should see something like
 80/tcp -> 0.0.0.0:32769
 ```
 
-Then open up your browser, and access the same page - e.g., `http://0.0.0.0:32769` or `curl http://0.0.0.0:32769`. What you should see is your new, fresh image!
+or
+
+```
+80/tcp -> localhost:32769
+```
+
+Then open up your browser, and access the same page,
+
+e.g., (`http://0.0.0.0:32769` or `http://localhost:32769`)
+
+or
+
+(`curl http://0.0.0.0:32769` or `curl http://localhost:32769`). What you should see is your new, fresh image!
 
 
 #### Exercise

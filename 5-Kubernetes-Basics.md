@@ -44,14 +44,15 @@ Do you see your pods in the list? It should look like this:
 
 ```
 $ kubectl get pods
-NAME          READY   STATUS              RESTARTS   AGE
-devopsgirls   0/1     ContainerCreating   0          2m41s
+
+NAME                           READY   STATUS              RESTARTS   AGE
+devopsgirls-xxxxxxxxxx-xxxxx   0/1     ContainerCreating   0          2m41s
 ```
 
 If you're happy with that, we can remove the pod with the following command:
 
 ```
-kubectl delete pod devopsgirls
+kubectl delete deployment devopsgirls
 ```
 
 And we're cleaned up!

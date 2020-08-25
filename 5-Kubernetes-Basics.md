@@ -31,7 +31,7 @@ kubectl describe nodes node1
 Finally, we can also run containers the same way we do in Docker. Remember the `nginx` container from before? We can run that container in the cluster with one command:
 
 ```
-kubectl run devopsgirls --image=nginx
+kubectl run devopsgirls --image=nginx --restart Never
 ```
 
 Where `--image=nginx` specifies that image that we're running on our cluster, and `devopsgirls` is the name of our pod. Once we execute the above, we can list out all the pods running in the cluster by doing a `get`:

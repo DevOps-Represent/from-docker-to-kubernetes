@@ -62,7 +62,7 @@ And we're cleaned up!
 We can recreate the pod again by running the following command:
 
 ```
-kubectl run devopsgirls --image=nginx
+kubectl run devopsgirls --image=nginx --restart Never
 ```
 
 This will recreate the pod. If you remember the previous commands, the `get` command grabs information regarding the pod that you specify. But did you know that there are several output types for that information? For example, you can run your `get` command like this:

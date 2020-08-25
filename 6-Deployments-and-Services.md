@@ -52,6 +52,8 @@ Again, we can check if the service exists using this command:
 kubectl get service
 ```
 
+The previous deployed service included `--type LoadBalancer`, which gave an EXTERNAL-IP, but this service does not, so don't wait for one to be created.
+
 ### Deployments
 
 As nice as it is that we can use a singular service to talk to things. But what happens when we delete a pod? Well, we can just tear it down and see what happens, right?

@@ -48,6 +48,10 @@ Use this option if you're more familiar with with the command line. Keep in mind
 
 After you've setup an environment with Docker and Kubernetes, you're going to need some files from this repository for parts of this workshop.
 
+If you're running the workshop on your computer, you'll need the files there.
+
+If you're using Google Kubernetes Engine, you'll also need the files there.
+
 ```
 git clone https://github.com/DevOps-Girls/from-docker-to-kubernetes.git
 ```

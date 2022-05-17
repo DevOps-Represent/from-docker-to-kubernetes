@@ -16,10 +16,10 @@ If we inspect the YAML file for the deployment we had earlier, we're going to se
   template:
     metadata:
       labels:
-        app: "devopsgirls"
+        app: "devopsrep"
 ```
 
-The above `labels` declaration basically means that every single `pod` that is created will have the key/value pair of `app: "devopsgirls"` associated with it. 
+The above `labels` declaration basically means that every single `pod` that is created will have the key/value pair of `app: "devopsrep"` associated with it. 
 
 We can create a new set of pods by changing the `labels:` declaration.
 
@@ -29,7 +29,7 @@ Open up with the Google Console editor by clicking on **Open Editor**, and selec
   template:
     metadata:
       labels:
-        app: "devopsgirls"
+        app: "devopsrep"
         dark: "true"
 ```
 
@@ -61,10 +61,10 @@ If we inspect the file in `kubes/service.yaml`, we're going to see the following
 
 ```
   selector:
-    app: "devopsgirls"
+    app: "devopsrep"
 ```
 
-This means that the `service` will only apply to the objects or pods that have the label `app: "devopsgirls"`. We can create the service with the same `apply` command that we used before:
+This means that the `service` will only apply to the objects or pods that have the label `app: "devopsrep"`. We can create the service with the same `apply` command that we used before:
  
 ```
 kubectl apply -f kubes/service.yaml
@@ -81,7 +81,7 @@ Running `kubectl get service` should show us the external IP we can use to see o
 ```
 $ kubectl get service
 NAME                    TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
-devopsgirls-service     ClusterIP   10.105.91.242    X.X.X.X        8000/TCP   5s
+devopsrep-service     ClusterIP   10.105.91.242    X.X.X.X        8000/TCP   5s
 ```
 
 Now...what happens if we remove one of the pods that the service is connected to? What we're going to find is that the service stays up - because *now* our infrastructure is highly available, as there are multiple pods running at the same time.
@@ -104,19 +104,19 @@ We also don't have to have the components (deployments, services) in different f
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: "devopsgirls-deployment"
+  name: "devopsrep-deployment"
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: "devopsgirls"
+      app: "devopsrep"
   template:
     metadata:
       labels:
-        app: "devopsgirls"
+        app: "devopsrep"
     spec:
       containers:
-        - image: "mydockerusername/devopsgirls:latest"
+        - image: "mydockerusername/devopsrep:latest"
           name: nginx
           ports:
             - containerPort: 80
@@ -126,16 +126,16 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: "devopsgirls-service"
+  name: "devopsrep-service"
 spec:
   ports:
     - port: 80
       targetPort: 80
   selector:
-    app: "devopsgirls"
+    app: "devopsrep"
 ```
 
-Where `mydockerusername/devopsgirls:latest` is our Docker username, the repository, and the tag that we used. We can now deploy it using the same `apply` command we've been using:
+Where `mydockerusername/devopsrep:latest` is our Docker username, the repository, and the tag that we used. We can now deploy it using the same `apply` command we've been using:
 
 ```
 kubectl apply -f kubes/combined.yaml
